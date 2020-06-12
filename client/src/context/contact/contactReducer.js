@@ -40,12 +40,12 @@ export default (state, action) => {
         current: null,
       };
     case FILTER_CONTACT:
+      const regex = new RegExp(`${action.payload}`, 'gi');
       return {
         ...state,
-        filtered: state.contacts.filter((contact) => {
-          const regex = new RegExp(`${action.payload}`, `gi`);
-          return contact.name.match(regex) || contact.email.match(regex);
-        }),
+        filtered: state.contacts.filter(
+          ({ name, email }) => regex.test(name) || regex.test(email)
+        ),
       };
     case CLEAR_FILTER:
       return {
