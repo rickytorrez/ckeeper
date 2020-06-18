@@ -70,7 +70,8 @@ router.post(
         }
       );
     } catch (err) {
-      console.error(err.message);
+      console.log(err);
+      // err here with unhandled promise
       res.status(500).send('Server Error');
     }
   }
