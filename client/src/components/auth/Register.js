@@ -31,57 +31,57 @@ const Register = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className='form-container'>
       <h1>
-        Account <span className="text-primary">Register</span>
+        Account <span className='text-primary'>Register</span>
       </h1>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
+        <div className='form-group'>
+          <label htmlFor='name'>Name</label>
           <input
-            type="text"
-            name="name"
+            type='text'
+            name='name'
             value={name}
             onChange={onChange}
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
+        <div className='form-group'>
+          <label htmlFor='email'>Email Address</label>
           <input
-            type="email"
-            name="email"
+            type='email'
+            name='email'
             value={email}
             onChange={onChange}
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        <div className='form-group'>
+          <label htmlFor='password'>Password</label>
           <input
-            type="password"
-            name="password"
+            type='password'
+            name='password'
             value={password}
             onChange={onChange}
             required
-            minLength="6"
+            minLength='6'
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="passwordConfirm">Confirm Password</label>
+        <div className='form-group'>
+          <label htmlFor='passwordConfirm'>Confirm Password</label>
           <input
-            type="password"
-            name="passwordConfirm"
+            type='password'
+            name='passwordConfirm'
             value={passwordConfirm}
             onChange={onChange}
             required
-            minLength="6"
+            minLength='6'
           />
         </div>
         <input
-          type="submit"
-          value="Register"
-          className="btn btn-primary btn-block"
+          type='submit'
+          value='Register'
+          className='btn btn-primary btn-block'
         />
       </form>
     </div>
